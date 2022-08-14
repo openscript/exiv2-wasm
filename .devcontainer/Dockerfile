@@ -12,8 +12,8 @@ RUN mkdir -p /opt/dev \
 ENV PATH="/opt/dev/emsdk:/opt/dev/emsdk/node/14.18.2_64bit/bin:/opt/dev/emsdk/upstream/emscripten:${PATH}"
 
 # [Optional] Uncomment this section to install additional OS packages.
-# RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
-#     && apt-get -y install --no-install-recommends <your-package-list-here>
+RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
+    && apt-get -y install --no-install-recommends cmake libexpat-dev
 
 # [Optional] Uncomment if you want to install an additional version of node using nvm
 # ARG EXTRA_NODE_VERSION=10
